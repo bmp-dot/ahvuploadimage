@@ -31,6 +31,7 @@ imageuuid = image_json['metadata']['uuid']
 url = uri + "/{}/file".format(imageuuid)
 headers = {'Content-Type': 'application/octet-stream;charset=UTF-8', 'accept-encoding': 'gzip, deflate, br', 'Accept': 'application/json'}
 print("Upload pending") 
+#Delay added to allow UUID create to finish (need to add status check to remove delay in future)
 time.sleep(20)
 print("Uploading new image:", imageuuid)
 
